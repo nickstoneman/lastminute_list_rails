@@ -6,8 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Appointments.delete_all
-Messages.delete_all
-Subscribers.delete_all
-Users.delete_all
+# Appointment.delete_all
+Message.delete_all
+Subscriber.delete_all
+User.delete_all
 
+Message.create(sms_message_body: 'some test goes here', appointment_time: '08:00:00', claim_appointment_url: 'uy')
+
+User.create(business_name: 'Clippy Snips', business_logo: 'string.url', business_address: '123 Fake Street')

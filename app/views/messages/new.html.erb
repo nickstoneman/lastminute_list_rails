@@ -1,0 +1,12 @@
+<div class="container">
+
+  <%= form_for @message do |form| %>
+  
+    <%= form.label :sms_message_body %>
+    <%= form.text_field :sms_message_body %>
+
+    <%= form.submit 'Create SMS' %>
+
+  <% end %>
+
+</div>
