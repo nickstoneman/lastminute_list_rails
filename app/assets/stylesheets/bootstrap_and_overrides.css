@@ -1,0 +1,109 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Use Font Awesome icons (default)
+  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+  =require twitter-bootstrap-static/fontawesome
+  */
+
+/*
+Vichyssoise - Light Color - #EFFFCD
+Hex - Second Light Color - #DCE9BE
+Shadow Dirt Light Dark Color - #555152
+Evening Cloud - #2E2633
+Heliotrope - #99173C
+*/
+
+
+
+
+body {
+  background-color: #EFFFCD;
+}
+
+.navbar-default .navbar-brand {
+  color: #2E2633;
+  font-size: 1.2em;
+}
+
+a {
+  color: #2E2633;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #555152;
+  text-decoration: none;
+}
+
+
+/* Custom style for top dashboard panels */
+.panel-primary .panel-heading {
+  background-color: #555152;
+  border-color: #555152;
+}
+
+.panel-primary {
+  border-color: #555152;
+}
+
+.panel-blue .panel-heading {
+  background-color: #EFFFCD;
+  border-color: #EFFFCD;
+}
+
+.panel-blue {
+  border-color: #555152;
+}
+
+.panel-heliotrope .panel-heading {
+    background-color: #99173C;
+    border-color: #99173C;
+    color: #fff;
+    /*border: 1px solid #99173C;*/
+}
+
+.panel-heliotrope {
+    /*color: #99173C;*/
+    border-color: #99173C;
+}
+
+.panel-heliotrope a {
+    color: #99173C;
+}
+
+.panel-heliotrope a:hover {
+    color: #b52b27;
+    border-color: #99173C;
+}
+
+.panel-sent .panel-heading {
+    background-color: #2E2633;
+    border-color: #2E2633;
+    color: #fff;
+    /*border: 1px solid #99173C;*/
+}
+
+.panel-sent {
+    /*color: #99173C;*/
+    border-color: #2E2633;
+}
+
+.panel-sent a {
+    color: #2E2633;
+}
+
+.panel-sent a:hover {
+    color: #555152;
+    border-color: #2E2633;
+}
+
+
+
+
+
+
+
+
+
+

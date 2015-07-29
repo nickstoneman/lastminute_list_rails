@@ -1,0 +1,1 @@
+json.extract! @message, :id, :sms_message_body, :claim_appointment_url, :appointment_time, :created_at, :updated_at

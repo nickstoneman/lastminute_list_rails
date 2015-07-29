@@ -5,6 +5,7 @@ class MessagesController < ApplicationController
   # GET /messages.json
   def index
     @messages = Message.all
+    @subscribers = Subscriber.all
     if @messages.length == 0
       flash[:alert] = "Let's get started. Create your first message."
     end
@@ -28,8 +29,9 @@ class MessagesController < ApplicationController
   # POST /messages
   # POST /messages.json
   def create
+    @subscribers = Subscriber.all
     @message = Message.new(message_params)
-
+    
     respond_to do |format|
       if @message.save
         format.html { redirect_to @message, notice: 'Message was successfully created.' }

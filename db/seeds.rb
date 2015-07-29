@@ -14,3 +14,5 @@ User.delete_all
 Message.create(sms_message_body: 'some test goes here', appointment_time: '08:00:00', claim_appointment_url: 'uy')
 
 User.create(business_name: 'Clippy Snips', business_logo: 'string.url', business_address: '123 Fake Street')
+
+Subscriber.create(subscriber_phone_number: '+447889216333', subscriber_email: 'nick@fake.com', subscriber_gender: 'male')
