@@ -31,9 +31,13 @@ class MessagesController < ApplicationController
   def create
     @subscribers = Subscriber.all
     @message = Message.new(message_params)
-    
+    # binding.pry
     respond_to do |format|
       if @message.save
+        # Creating the appointment message when the form is submitted
+        @appointment = Appointment.create(message_id:@message.id)
+        @message.claim_appointment_url = "localhost:3000/appointments/#{@appointment.id}"
+        @message.save
         format.html { redirect_to @message, notice: 'Message was successfully created.' }
         format.json { render :show, status: :created, location: @message }
       else

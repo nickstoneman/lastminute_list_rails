@@ -1,10 +1,10 @@
 class Message < ActiveRecord::Base
-  # belongs_to :user
-  # has_many: subscribers
+  belongs_to :user
+  has_many :subscribers
+  has_one :appointment
 
   validates :sms_message_body, presence: true
   validates :appointment_time, presence: true
-  validates :claim_appointment_url, presence: true
 
   after_create :reminder
 

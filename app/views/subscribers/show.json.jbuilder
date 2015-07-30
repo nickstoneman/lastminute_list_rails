@@ -1,0 +1,1 @@
+json.extract! @subscriber, :id, :subscriber_phone_number, :subscriber_email :created_at, :updated_at

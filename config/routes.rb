@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   resources :messages
   resources :main
-
+  resources :subscribers
+  resources :appointments
   
   root 'home#index'
 end
