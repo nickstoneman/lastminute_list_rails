@@ -1,0 +1,19 @@
+
+
+<%= @appointment.message_id %>
+<%= @appointment.message.sms_message_body %>
+<p>test</p>
+
+
+
+
+
+<div class="container">
+      <%= form_tag("/appointments/#{@appointment.id}/book", method: 'post') do %>
+        <%= label_tag :customer_name %>
+        <%= text_field_tag :customer_name %>
+        <%= submit_tag('Book')%>
+      <% end %>
+</div>
+
+

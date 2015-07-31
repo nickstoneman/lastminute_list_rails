@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :main
   resources :subscribers
   resources :appointments
-  
+  post '/appointments/:id/book', to: 'appointments#book'
   root 'home#index'
 end
   # resources :users do
