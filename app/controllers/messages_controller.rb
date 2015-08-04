@@ -20,6 +20,7 @@ class MessagesController < ApplicationController
   def new
     @message = Message.new
     @min_date = DateTime.now
+    @subscribers = Subscriber.all
     # @user = User.find(params[:user_id])
   end
 
@@ -41,6 +42,7 @@ class MessagesController < ApplicationController
         @message.save
         format.html { redirect_to @message, notice: 'Message was successfully created.' }
         format.json { render :show, status: :created, location: @message }
+
       else
         format.html { render :new }
         format.json { render json: @message.errors, status: :unprocessable_entity }
