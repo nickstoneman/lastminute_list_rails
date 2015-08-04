@@ -5,6 +5,7 @@ class MessagesController < ApplicationController
   # GET /messages.json
   def index
     @messages = Message.all
+    @appointments = Appointment.all
     @subscribers = Subscriber.all
     if @messages.length == 0
       flash[:alert] = "Let's get started. Create your first message."

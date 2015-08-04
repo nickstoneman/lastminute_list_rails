@@ -11,6 +11,12 @@
             <%= render "shared/dashboard_panel" %>
 
             <!-- PAGE CONTENT HERE -->
+            <%= Subscriber.count(:subscriber_phone_number) %>
+
+
+
+
+
             <%- model_class = Subscriber -%>
             
             <div class="page-header">

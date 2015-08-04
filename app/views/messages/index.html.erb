@@ -11,6 +11,13 @@
             <%= render "shared/dashboard_panel" %>
 
             <!-- PAGE CONTENT HERE -->
+
+            <% @appointments.each do |appointment| %> 
+              <%= human_boolean(appointment.filled) %>
+            <% end %>
+
+
+
             <%- model_class = Message -%>
             
             <div class="page-header">
@@ -29,14 +36,14 @@
                 </tr>
               </thead>
               <tbody>
-                <% @messages.each do |message| %>
+                <% @messages.each_with_index do |message, i| %>
                   <tr>
                     <td><%= link_to message.id, message_path(message) %></td>
                     <td><%= message.sms_message_body %></td>
                     <td><%= message.appointment_time %></td>
-                    <td><%= message.claim_appointment_url %></td>
+                    <td><%= link_to message.claim_appointment_url %></td>
                     <td><%= message.appointment_discount %></td>
-                    <td><%=l message.created_at %></td>
+                    <td><%= message.created_at %></td>
                     <td>
                       <%= link_to t('.edit', :default => t("helpers.links.edit")),
                                   edit_message_path(message), :class => 'btn btn-default btn-xs' %>
@@ -47,6 +54,7 @@
                                   :class => 'btn btn-xs btn-danger' %>
                     </td>
                   </tr>
+                  <% break if i == 10; %>
                 <% end %>
               </tbody>
             </table>

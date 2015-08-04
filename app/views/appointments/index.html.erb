@@ -1,12 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-</head>
-<body>
-  
+<div id="wrapper">
 
-  test page
-</body>
-</html>
+<!-- Navigation - from Shared -->
+<%= render "shared/dashboard_navigation" %>
+
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+        <br>
+            <!-- Dashboard Panel - from Shared -->
+            <%= render "shared/dashboard_panel" %>
+
+            <!-- PAGE CONTENT HERE -->
+             <% @appointments.each do |appointment| %> 
+               <%= human_boolean(appointment.filled) %>
+               <%= appointment.message_id %>
+               <%= appointment.message.sms_message_body %>
+             <% end %>
+
+             <% @subscribers.each do |subscriber| %> 
+               <%= subscriber.subscriber_email %>
+             <% end %>
+
+   
+            
+
+
+
+            

@@ -2,6 +2,9 @@ class AppointmentsController < ApplicationController
   
 
   def index
+    @appointments = Appointment.all
+    @subscribers = Subscriber.all
+    @messages = Message.all
   end
 
   def show
