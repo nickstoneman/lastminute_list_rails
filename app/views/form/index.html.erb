@@ -1,0 +1,445 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Sharpen</title>
+  <meta name="description" content="...">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Icons -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+  <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+  <link rel="stylesheet" href="assets/css/select2.min.css">
+  <link rel="stylesheet" href="assets/font-awesome-4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/fontello.css">
+  <link rel="stylesheet" href="assets/css/chartist.min.css">
+  <link rel="stylesheet" href="assets/css/app.min.css">
+  
+  <!-- Modernizr -->
+  <script src="assets/js/modernizr-2.8.3.min.js"></script>
+
+  <!-- Google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- Header -->
+  <header id="header">
+    <h1 class="logo">
+      <a href="#" title="#" class="js-nav-toggler">
+        <i class="icon icon-close"></i>
+      </a>
+      <a href="#" title="#">Shar<span>pen</span></a>
+    </h1>
+
+    <div class="pageContent">
+      <div class="container">
+        <ul class="topNavigation">
+          <li>
+            <a href="#" title="#">
+              <i class="zmdi zmdi-email zmdi-hc-fw icon"></i>
+              <span class="badge">6</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="#">
+              <i class="zmdi zmdi-bookmark zmdi-hc-fw icon"></i>
+              <span class="badge">98</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="#">
+              <i class="zmdi zmdi-settings zmdi-hc-fw icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="#">
+              <i class="zmdi zmdi-search zmdi-hc-fw icon"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  
+  <aside class="aside">
+    <!-- User profile -->
+    <div class="asideUserProfile">
+      <a href="user-profile.html" title="#" class="c">
+        <img src="tmp/210x210.jpg" alt="#" class="img-responsive">
+        <span class="name hidden-xs hidden-sm">Patricia<br /> Brown-Johnes</span>
+      </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="simpleList asideNavigation">
+      <ul>
+        <li><a href="dashboard.html" title="#"><i class="zmdi zmdi-apps zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Dashboard</span></a></li>
+        <li><a href="typography.html" title="#"><i class="zmdi zmdi-format-color-text zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Typography</span></a></li>
+        <li><a href="gallery-grid.html" title="#"><i class="zmdi zmdi-view-dashboard zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Grid</span></a></li>
+        <li><a href="tables.html" title="#"><i class="zmdi zmdi-view-day zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Tables</span></a></li>
+        <li><a href="forms.html" title="#"><i class="zmdi zmdi-border-color zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Forms</span></a></li>
+        <li class="sub js-submenu">
+          <div><i class="zmdi zmdi-tune zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">UI elements <i class="zmdi zmdi-plus plus"></i></span></div>
+
+          <ul>
+            <li><a href="color-schemes.html" title="#">Color schemes</a></li>
+            <li><a href="icons.html" title="#">Icons</a></li>
+            <li><a href="modals.html" title="#">Modals</a></li>
+            <li><a href="alerts.html" title="#">Alerts</a></li>
+            <li><a href="accordion.html" title="#">Accordion</a></li>
+            <li><a href="tabs.html" title="#">Tabs</a></li>
+            <li><a href="buttons.html" title="#">Buttons</a></li>
+          </ul>
+        </li>
+        <li class="sub js-submenu">
+          <div><i class="zmdi zmdi-format-clear-all zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Pages <i class="zmdi zmdi-plus plus"></i></span></div>
+
+          <ul>
+            <li><a href="user-profile.html" title="#">User Profile</a></li>
+            <li><a href="cards.html" title="#">Cards</a></li>
+            <li><a href="login.html" title="#">Sign In</a></li>
+            <li><a href="sign-up.html" title="#">Sing Up</a></li>
+            <li><a href="forgot-password.html" title="#">Forgot Password</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Page Wrap -->
+  <div class="pageWrap">
+
+    <!-- Page content -->
+    <div class="pageContent extended">
+      <div class="container">
+        <h1 class="pageTitle">
+          <a href="#" title="#">Forms</a>
+        </h1>
+        
+        <div class="box rte">
+          <h2 class="boxHeadline">Input Fields</h2>
+          <h3 class="boxHeadlineSub">Subtitle of the input fields goes here</h3>
+          
+          <form>
+            <div class="row">
+              <div class="col-xs-12 col-sm-4">
+                <div class="form-group">
+                  <label for="basicInput">Basic Input</label>
+                  <input type="text" class="form-control" id="basicInput" placeholder="Placeholder">
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <div class="form-group">
+                  <label for="basicInputActive">Basic Input active</label>
+                  <input type="text" class="form-control" id="basicInputActive" placeholder="Placeholder">
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <div class="form-group">
+                  <label for="basicInputValidate">Basic Input validate</label>
+                  <input type="text" class="form-control error" id="basicInputValidate" placeholder="Placeholder">
+                  <div class="input-error-msg">Wrong format</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Custom select -->
+            <div class="row customSelectWrap">
+              <div class="col-xs-12 col-sm-4 i">
+                <div class="form-group">
+                  <label>Country</label>
+                  <select class="js-select">
+                    <option disabled selected>- Select country -</option>
+                    <option>Slovakia</option>
+                    <option>Czech Republic</option>
+                    <option>Russia</option>
+                    <option>United Kingdom</option>
+                    <option>Spain</option>
+                    <option>France</option>
+                    <option>Austria</option>
+                    <option>Germany</option>
+                    <option>Italy</option>
+                    <option>USA</option>
+                    <option>Norway</option>
+                    <option>Denmark</option>
+                    <option>Iceland</option>
+                    <option>Croatia</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-4 i">
+                <div class="form-group">
+                  <label>Country</label>
+                  <select class="js-select">
+                    <option disabled selected>- Select country -</option>
+                    <option>Slovakia</option>
+                    <option>Czech Republic</option>
+                    <option>Russia</option>
+                    <option>United Kingdom</option>
+                    <option>Spain</option>
+                    <option>France</option>
+                    <option>Austria</option>
+                    <option>Germany</option>
+                    <option>Italy</option>
+                    <option>USA</option>
+                    <option>Norway</option>
+                    <option>Denmark</option>
+                    <option>Iceland</option>
+                    <option>Croatia</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-4 i">
+                <div class="form-group">
+                  <label>Country</label>
+                  <select class="error js-select">
+                    <option disabled selected>- Select country -</option>
+                    <option>Slovakia</option>
+                    <option>Czech Republic</option>
+                    <option>Russia</option>
+                    <option>United Kingdom</option>
+                    <option>Spain</option>
+                    <option>France</option>
+                    <option>Austria</option>
+                    <option>Germany</option>
+                    <option>Italy</option>
+                    <option>USA</option>
+                    <option>Norway</option>
+                    <option>Denmark</option>
+                    <option>Iceland</option>
+                    <option>Croatia</option>
+                  </select>
+                  <div class="input-error-msg">Choose option</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Textarea -->
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <div class="form-group">
+                  <label for="textarea1">Message</label>
+                  <textarea id="textarea1" class="form-control" rows="8">Lorem ipsum dolor sit amet, cu pro omittam adipisci, stet platonem theophrastus qui in. No fugit nobis accusamus nec. Semper explicari ei mei, cu simul omnes definiebas vis. Ne duo debitis similique expetendis, ne vis aliquando complectitur. Eu malorum persius liberavisse has, discere petentium assueverit sea at. Ad illum dictas persequeris sit.</textarea>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <div class="form-group">
+                  <label for="textarea2">Message</label>
+                  <textarea id="textarea2" class="form-control error" rows="8"></textarea>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="box rte">
+          <h2 class="boxHeadline">Upload File</h2>
+          <h3 class="boxHeadlineSub">Subtitle of the upload file goes here</h3>
+
+          <form>
+            <div class="row">
+              <div class="col-xs-12 col-md-6">
+                <div class="fileUploadWrap">
+                  <input type="file" class="form-control">
+                  <div class="btn btn-green">Upload Document</div>
+                  <div class="info">Doc., Docx., Xls., Xlsx.</div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-6">
+                <div class="alert alert-dismissible alert-file-upload" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <strong>lorem-isumtamus-tarcius.docx</strong>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="box rte">
+          <h2 class="boxHeadline">Checkboxes</h2>
+          <h3 class="boxHeadlineSub">Subtitle goes here</h3>
+
+          <form>
+            <!-- Checkboxes -->
+            <div class="row checkboxes">
+              <div class="col-xs-12 col-sm-4 i">
+                <label>
+                  <input type="checkbox">
+                  <span>Checkbox option</span>
+                </label>
+              </div>
+              <div class="col-xs-12 col-sm-4 i">
+                <label>
+                  <input type="checkbox" class="error">
+                  <span>Checkbox option</span>
+                </label>
+              </div>
+              <div class="col-xs-12 col-sm-4 i">
+                <label>
+                  <input type="checkbox">
+                  <span>Checkbox option</span>
+                </label>
+              </div>
+            </div>
+            <div class="row checkboxes">
+              <div class="col-xs-12 col-sm-4 i">
+                <label>
+                  <input type="checkbox" disabled>
+                  <span>Checkbox option disabled</span>
+                </label>
+              </div>
+              <div class="col-xs-12 col-sm-4 i">
+                <label>
+                  <input type="checkbox" class="error">
+                  <span>Checkbox option</span>
+                </label>
+              </div>
+              <div class="col-xs-12 col-sm-4 i">
+                <label>
+                  <input type="checkbox" checked>
+                  <span>Checkbox option</span>
+                </label>
+              </div>
+            </div>
+            <div class="row checkboxes">
+              <div class="col-xs-12 col-sm-4 col-sm-offset-4 i">
+                <label>
+                  <input type="checkbox" disabled>
+                  <span>Checkbox option disabled</span>
+                </label>
+              </div>
+              <div class="col-xs-12 col-sm-4 i">
+                <label>
+                  <input type="checkbox" disabled>
+                  <span>Checkbox option disabled</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Break -->
+            <hr />
+
+            <!-- Radio Buttons -->
+            <h2 class="boxHeadline">Radio Buttons</h2>
+            <h3 class="boxHeadlineSub">Subtitle goes here</h3>
+
+            <div class="radiobuttons">
+              <label>
+                <input type="radio" name="radio">
+                <span>Radio option</span>
+              </label>
+              <label>
+                <input type="radio" name="radio" checked>
+                <span>Radio option</span>
+              </label>
+              <label>
+                <input type="radio" name="radio">
+                <span>Radio option</span>
+              </label>
+              <label>
+                <input type="radio" name="radio" disabled>
+                <span>Radio option</span>
+              </label>
+            </div>
+          </form>
+        </div>
+
+        <!-- Input slider -->
+        <div class="box rte">
+          <h2 class="boxHeadline">Input slider</h2>
+          <h3 class="boxHeadlineSub">Subtitle goes here</h3>
+
+          <form>
+            <div class="form-group inputSliders">
+              <label for="amount">
+                Max. Range Value:
+                <input type="text" id="amount" class="max-range-value" readonly style="border:0; color:#363f45;">
+              </label>
+              <div class="sliderWrap">
+                <div id="slider-range-max"></div>
+              </div>
+            </div>
+
+            <div class="form-group inputSliders">
+              <div class="row">
+                <div class="col-xs-6">
+                  <label for="amount-1">
+                    Min Range Value:
+                    <input type="text" id="amount-1" readonly style="border:0; color:#363f45;">
+                  </label>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <label for="amount-2">
+                    Max. Range Value:
+                    <input type="text" id="amount-2" readonly style="border:0; color:#363f45;">
+                  </label>
+                  
+                </div>
+              </div>
+              <div class="sliderWrap">
+                <div id="slider-range"></div>
+              </div>
+            </div>
+
+            <!-- Break -->
+            <hr />
+
+            <h2 class="boxHeadline">Toggle options</h2>
+            <h3 class="boxHeadlineSub">Subtitle goes here</h3>
+
+            <div class="row checkboxToggler">
+              <div class="col-xs-4 col-sm-3 col-md-2 i">
+                Toggle Off
+                <label>
+                  <input type="checkbox">
+                  <span></span>
+                </label>
+              </div>
+              <div class="col-xs-4 col-sm-3 col-md-2 i">
+                Toggle On
+                <label>
+                  <input type="checkbox" checked>
+                  <span></span>
+                </label>
+              </div>
+              <div class="col-xs-4 col-sm-3 col-md-2 i">
+                Toggle Disabled
+                <label>
+                  <input type="checkbox" disabled checked>
+                  <span></span>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="assets/js/jquery-1.11.3.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery-ui.min.js"></script>
+  <script src="assets/js/select2.min.js"></script>
+  <script src="assets/js/parsley.min.js"></script>
+  <script src="assets/js/throttle-debounce.min.js"></script>
+  <script src="assets/js/jquery.shuffle.min.js"></script>
+  <script src="assets/js/autosize.min.js"></script>
+  <script src="assets/js/raphael-min.js"></script>
+  <script src="assets/js/morris.min.js"></script>
+  <script src="assets/js/Chart.min.js"></script>
+  <script src="assets/js/chartist.min.js"></script>
+  <script src="assets/js/app.min.js"></script>
+
+  <div class="visible-xs visible-sm extendedChecker"></div>
+</body>
+</html>

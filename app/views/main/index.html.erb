@@ -9,14 +9,8 @@
   
   <!-- Icons -->
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/chartist.min.css">
-  <link rel="stylesheet" href="assets/css/app.min.css">
-  
-  <!-- Modernizr -->
-  <script src="assets/js/modernizr-2.8.3.min.js"></script>
 
+  <!-- styles are currently loading from application.css -->
   
 </head>
 <body>
@@ -30,7 +24,7 @@
       <a href="#" title="#" class="js-nav-toggler">
         <i class="icon icon-close"></i>
       </a>
-      <a href="#" title="#">Shar<span>pen</span></a>
+      <a href="#" title="#">LastMinute<span>List</span></a>
     </h1>
 
     <div class="pageContent">
@@ -67,7 +61,7 @@
     <!-- User profile -->
     <div class="asideUserProfile">
       <a href="user-profile.html" title="#" class="c">
-        <img src="tmp/210x210.jpg" alt="#" class="img-responsive">
+        <%= image_tag("210x210.jpg", class: "img-responsive") %>
         <span class="name hidden-xs hidden-sm">Patricia<br /> Brown-Johnes</span>
       </a>
     </div>
@@ -79,7 +73,7 @@
         <li><a href="typography.html" title="#"><i class="zmdi zmdi-format-color-text zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Typography</span></a></li>
         <li><a href="gallery-grid.html" title="#"><i class="zmdi zmdi-view-dashboard zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Grid</span></a></li>
         <li><a href="tables.html" title="#"><i class="zmdi zmdi-view-day zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Tables</span></a></li>
-        <li><a href="forms.html" title="#"><i class="zmdi zmdi-border-color zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Forms</span></a></li>
+        <li><a href="forms.html.erb" title="#"><i class="zmdi zmdi-border-color zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Forms</span></a></li>
         <li class="sub js-submenu">
           <div><i class="zmdi zmdi-tune zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">UI elements <i class="zmdi zmdi-plus plus"></i></span></div>
 
@@ -415,7 +409,7 @@
                     <a href="#" title="#">
                       <i class="zmdi zmdi-chevron-right arrow"></i>
                       <div class="image">
-                        <img src="tmp/iphone.png" alt="#" width="81" height="66">
+                        <%= image_tag("iphone.png", size: "81x66", alt: "#") %>
                       </div>
                       iPhone 6s + Apple Green cover IU/T
                       <span class="info">6 min. ago</span>
@@ -451,19 +445,6 @@
   </div>
 
   <!-- JS -->
-  <script src="assets/js/jquery-1.11.3.min.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery-ui.min.js"></script>
-  <script src="assets/js/select2.min.js"></script>
-  <script src="assets/js/parsley.min.js"></script>
-  <script src="assets/js/throttle-debounce.min.js"></script>
-  <script src="assets/js/jquery.shuffle.min.js"></script>
-  <script src="assets/js/autosize.min.js"></script>
-  <script src="assets/js/raphael-min.js"></script>
-  <script src="assets/js/morris.min.js"></script>
-  <script src="assets/js/Chart.min.js"></script>
-  <script src="assets/js/chartist.min.js"></script>
-  <script src="assets/js/app.min.js"></script>
 
   <div class="visible-xs visible-sm extendedChecker"></div>
 </body>
