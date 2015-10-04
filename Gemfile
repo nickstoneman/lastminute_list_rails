@@ -29,6 +29,8 @@ gem 'twilio-ruby'
 # Use bootstrap themes
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
+gem 'fontello_rails_converter'
+
 
 
 # Use ActiveModel has_secure_password

@@ -9,7 +9,7 @@ $(function() {
   Sliders.init();
   GalleryGrid.init();
   Charts.init();
-
+  Modals.init();
 });
 
 Misc = {
@@ -314,5 +314,30 @@ Charts = {
     if ($('#line-chart-2').length) {
       Charts.lineChart2.redraw();
     }
+  }
+
+}
+
+// Modals
+Modals = {
+  init: function() {
+    $('.modal').on('show.bs.modal', Modals.centerModals());
+    $(window).on('resize', Modals.centerModals());
+
+    $('#searchModal').on('shown.bs.modal', function () {
+      setTimeout(function() {
+        $('#searchModal .form-control').focus();
+      }, 200);
+    });
+  },
+
+  centerModals: function() {
+    $('.modal').each(function(i){
+      var $clone = $(this).clone().css('display', 'block').appendTo('body');
+      var top = Math.round(($clone.height() - $clone.find('.modal-content').height()) / 2);
+      top = top > 0 ? top : 0;
+      $clone.remove();
+      $(this).find('.modal-content').css("margin-top", top);
+    });
   }
 }
