@@ -9,6 +9,7 @@
   
   <!-- Shared Resoures for the Dashboard -->
   <%= render "shared/dashboard_css" %>
+  <link rel="stylesheet" href="font-awesome-animation.min.css">
   <!-- styles are currently loading from application.css -->
   
 </head>
@@ -59,15 +60,15 @@
     <!-- Navigation -->
     <nav class="simpleList asideNavigation">
       <ul>
-        <li class="active"><a href="dashboard.html" title="#"><i class="zmdi zmdi-apps zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Dashboard</span></a></li>
+        <li class="active"><a href="/main" title="#"><i class="zmdi zmdi-apps zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Dashboard</span></a></li>
         
-        <li><a href="messages/new.html" title="#"><i class="zmdi zmdi-smartphone-ring zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">New Alert</span></a></li>
+        <li><a href="messages/new" title="#"><i class="zmdi zmdi-smartphone-ring zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">New Alert</span></a></li>
         
         <li><a href="/messages" title="#"><i class="zmdi zmdi-comment-list zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Past Alerts</span></a></li>
         
         <li><a href="/appointments" title="#"><i class="zmdi zmdi-check zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Bookings</span></a></li>
         
-        <li><a href="/subscribers.html" title="#"><i class="zmdi zmdi-face zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Subscribers</span></a></li>
+        <li><a href="/subscribers" title="#"><i class="zmdi zmdi-face zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Subscribers</span></a></li>
       </ul>
     </nav>
   </aside>
@@ -121,8 +122,25 @@
             </div>
           </div>
         </div>
+        
+        <!-- Card for Temp Link to Public Page -->
+        <div class="row">
+          <div class="col-xs-12 col-md-6">
+            <div class="box userCard userCardWide">
+              <div class="c">
+                <a href="#" title="#" class="image">
+                  <i class="fa fa-5x fa-globe wow bounceIn text-yellow" data-wow-delay=".2s"></i>
+                </a>
+                <div class="info rte">
+                  <h4 class="name">Public Sign-up Page</h2>
+                  <div class="position text-light-gray">Page is outside dashboard when authentication is added</div>
 
-        <p>page content here</p>       
+                  <strong>Hair Nail Restaurant</strong><br />
+                  Some street No. 554/5A, San Francisco, CA 94925<br />
+                </div>
+              </div>
+            </div>
+          </div>       
 
 
   <div class="visible-xs visible-sm extendedChecker"></div>
