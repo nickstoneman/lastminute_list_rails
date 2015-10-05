@@ -1,31 +1,60 @@
-<div id="wrapper">
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Messages</title>
+  <meta name="description" content="...">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Shared Resoures for the Dashboard -->
+  <%= render "shared/dashboard_css" %>
+  <!-- styles are currently loading from application.css -->
+  
+</head>
+<body>
+  <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
 
 <%= render "shared/dashboard_header" %>
 
-<!-- Navigation - from Shared -->
-<%= render "shared/dashboard_navigation" %>
+  <!-- Page Wrap -->
+  <div class="pageWrap">
+
+  <!-- Page content -->
+    <div class="pageContent extended">
+      <div class="container">
+        <div class="boxHeader pageBoxHeader clearfix">
+          <div class="pull-left">
+            <h1 class="pageTitle">
+              <a href="#" title="#">Dashboard</a>
+            </h1>
+            <ol class="breadcrumb">
+              <li><a href="dashboard.html">Last Minute List</a></li>
+              <li class="active">Past Alerts</li>
+            </ol>
+          </div>
+        </div>
 
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-        <br>
-            <!-- Dashboard Panel - from Shared -->
-            <%= render "shared/dashboard_panel" %>
-
             <!-- PAGE CONTENT HERE -->
-
             <% @appointments.each do |appointment| %> 
               <%= human_boolean(appointment.filled) %>
             <% end %>
 
-
-
             <%- model_class = Message -%>
             
-            <div class="page-header">
-              <h1>Sent <%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
-            </div>
-            <table class="table table-striped">
+            <!-- Original Table -->
+              <!-- Basic table -->
+        <div class="box rte box-without-bottom-padding">
+          <h2 class="boxHeadline">Past Alerts</h2>
+          <h3 class="boxHeadlineSub">A list of past SMS messages sent</h3>
+          
+          <div class="tableWrap table-responsive">
+            <table class="table">
               <thead>
                 <tr>
                   <th><%= model_class.human_attribute_name(:id) %></th>
@@ -60,6 +89,8 @@
                 <% end %>
               </tbody>
             </table>
+          </div>
+        </div>
 
             <%= link_to t('.new', :default => t("helpers.links.new")), new_message_path, :class => 'btn btn-primary' %>      
         </div>
@@ -70,6 +101,10 @@
 <!-- /#wrapper -->
 
 
+
+  <div class="visible-xs visible-sm extendedChecker"></div>
+  
+</body>
 
 
 

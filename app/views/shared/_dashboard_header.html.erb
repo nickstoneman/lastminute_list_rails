@@ -1,4 +1,3 @@
-  <%= render "shared/dashboard_css" %>
   <!-- Header -->
   <header id="header">
     <h1 class="logo">
@@ -12,105 +11,11 @@
       <div class="container">
         <ul class="topNavigation">
           <li>
-            <div class="btn-group simpleList simpleListLighten messages">
-              <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="zmdi zmdi-email zmdi-hc-fw icon"></i>
-                <span class="badge">6</span>
-              </button>
-              
-              <ul class="dropdown-menu pull-right">
-                <li>
-                  <a href="#" title="#" class="clearfix">
-                    <img src="tmp/44x44-3.jpg" alt="#" width="44" height="44" class="pull-left">
-                    <span class="pull-left">
-                      <strong class="text-gray">John Doe</strong><br />
-                      <span class="text-gray">Proin vel sapien at risus...</span>
-                    </span>
-                    <span class="pull-right">22 sec. ago</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" title="#" class="clearfix">
-                    <img src="tmp/44x44-1.jpg" alt="#" width="44" height="44" class="pull-left">
-                    <span class="pull-left">
-                      <strong class="text-gray">Jane Doe</strong><br />
-                      <span class="text-gray">Aliquam non accumsan...</span>
-                    </span>
-                    <span class="pull-right">19 min. ago</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" title="#" class="clearfix">
-                    <img src="tmp/44x44-4.jpg" alt="#" width="44" height="44" class="pull-left">
-                    <span class="pull-left">
-                      <strong class="text-gray">Nick Doe</strong><br />
-                      <span class="text-gray">Praesent non hendrerit...</span>
-                    </span>
-                    <span class="pull-right">1 hour ago</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" title="#" class="clearfix">
-                    <img src="tmp/44x44-5.jpg" alt="#" width="44" height="44" class="pull-left">
-                    <span class="pull-left">
-                      <strong class="text-gray">Andrew Doe</strong><br />
-                      <span class="text-gray">Aliquam ligula ante magna...</span>
-                    </span>
-                    <span class="pull-right">21.09.2015</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" title="#" class="clearfix text-center">
-                    <i class="zmdi zmdi-plus-square icon"></i> <strong class="text-gray">See all</strong>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
             <div class="btn-group simpleList list-sm">
               <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="zmdi zmdi-bookmark zmdi-hc-fw icon"></i>
-                <span class="badge">98</span>
+                <span class="badge">3</span>
               </button>
-
-              <ul class="dropdown-menu pull-right">
-                <li>
-                  <a href="#" title="#" class="clearfix">
-                    <span class="pull-left"><i class="zmdi zmdi-accounts-add zmdi-hc-fw icon"></i> Followers</span>
-                    <span class="pull-right info">109,073</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" title="#" class="clearfix">
-                    <span class="pull-left"><i class="zmdi zmdi-accounts-list-alt zmdi-hc-fw icon"></i> Subscribers</span>
-                    <span class="pull-right info">26,114</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" title="#" class="clearfix">
-                    <span class="pull-left"><i class="zmdi zmdi-assignment-o zmdi-hc-fw icon"></i> Products sold</span>
-                    <span class="pull-right info">1,557,669</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" title="#" class="clearfix">
-                    <span class="pull-left"><i class="zmdi zmdi-bookmark zmdi-hc-fw icon"></i> Awards</span>
-                    <span class="pull-right info">14</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" title="#" class="clearfix">
-                    <span class="pull-left"><i class="zmdi zmdi-cloud-done zmdi-hc-fw icon"></i> Projects</span>
-                    <span class="pull-right info">229</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" title="#" class="clearfix text-center">
-                    <i class="zmdi zmdi-plus-square icon"></i> See all
-                  </a>
-                </li>
-              </ul>
             </div>
           </li>
           <li>
@@ -118,12 +23,32 @@
               <i class="zmdi zmdi-settings zmdi-hc-fw icon"></i>
             </a>
           </li>
-          <li>
-            <a href="#" title="#" data-toggle="modal" data-target="#searchModal">
-              <i class="zmdi zmdi-search zmdi-hc-fw icon"></i>
-            </a>
-          </li>
         </ul>
       </div>
     </div>
   </header>
+
+  <aside class="aside">
+    <!-- User profile -->
+    <div class="asideUserProfile">
+    <%= image_tag "user_placeholder.jpg", :class => "img-responsive" %>
+      
+        <span class="name hidden-xs hidden-sm">Julia<br /> Brown-Johnes</span>
+      </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="simpleList asideNavigation">
+      <ul>
+        <li class="active"><a href="dashboard.html" title="#"><i class="zmdi zmdi-apps zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Dashboard</span></a></li>
+        
+        <li><a href="messages/new.html" title="#"><i class="zmdi zmdi-smartphone-ring zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">New Alert</span></a></li>
+        
+        <li><a href="/messages" title="#"><i class="zmdi zmdi-comment-list zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Past Alerts</span></a></li>
+        
+        <li><a href="/appointments" title="#"><i class="zmdi zmdi-check zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Bookings</span></a></li>
+        
+        <li><a href="/subscribers.html" title="#"><i class="zmdi zmdi-face zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Subscribers</span></a></li>
+      </ul>
+    </nav>
+  </aside>
