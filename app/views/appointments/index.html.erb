@@ -1,14 +1,45 @@
-<div id="wrapper">
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Messages</title>
+  <meta name="description" content="...">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Shared Resoures for the Dashboard -->
+  <%= render "shared/dashboard_css" %>
+  <!-- styles are currently loading from application.css -->
+  
+</head>
+<body>
+  <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
 
-<!-- Navigation - from Shared -->
-<%= render "shared/dashboard_navigation" %>
+<%= render "shared/dashboard_header" %>
 
-<div id="page-wrapper">
-    <div class="row">
-        <div class="col-lg-12">
-        <br>
-            <!-- Dashboard Panel - from Shared -->
-            <%= render "shared/dashboard_panel" %>
+  <!-- Page Wrap -->
+  <div class="pageWrap">
+
+  <!-- Page content -->
+    <div class="pageContent extended">
+      <div class="container">
+        <div class="boxHeader pageBoxHeader clearfix">
+          <div class="pull-left">
+            <h1 class="pageTitle">
+              <a href="#" title="#">Appointments</a>
+            </h1>
+            <ol class="breadcrumb">
+              <li><a href="dashboard.html">Last Minute List</a></li>
+              <li class="active">Appointments</li>
+            </ol>
+          </div>
+        </div>
+
+
+
+
 
             <!-- PAGE CONTENT HERE -->
              <% @appointments.each do |appointment| %> 

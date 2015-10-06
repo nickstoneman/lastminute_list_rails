@@ -1,14 +1,98 @@
-<div id="wrapper">
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Messages</title>
+  <meta name="description" content="...">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Shared Resoures for the Dashboard -->
+  <%= render "shared/dashboard_css" %>
+  <!-- styles are currently loading from application.css -->
+  
+</head>
+<body>
+  <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
 
-<!-- Navigation - from Shared -->
-<%= render "shared/dashboard_navigation" %>
+  <!-- Header -->
+  <header id="header">
+    <h1 class="logo">
+      <a href="#" title="#" class="js-nav-toggler">
+        <i class="fa fa-scissors"></i>
+      </a>
+      <a href="#" title="#">LASTMINUTE<span>LIST</span></a>
+    </h1>
+
+    <div class="pageContent">
+      <div class="container">
+        <ul class="topNavigation">
+          <li>
+            <div class="btn-group simpleList list-sm">
+              <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="zmdi zmdi-bookmark zmdi-hc-fw icon"></i>
+                <span class="badge">3</span>
+              </button>
+            </div>
+          </li>
+          <li>
+            <a href="#" title="#">
+              <i class="zmdi zmdi-settings zmdi-hc-fw icon"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <aside class="aside">
+    <!-- User profile -->
+    <div class="asideUserProfile">
+    <%= image_tag "user_placeholder.jpg", :class => "img-responsive" %>
+      
+        <span class="name hidden-xs hidden-sm">Julia<br /> Brown-Johnes</span>
+      </a>
+    </div>
+
+  <!-- Navigation -->
+    <nav class="simpleList asideNavigation">
+      <ul>
+        <li class="active"><a href="/main" title="#"><i class="zmdi zmdi-apps zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Dashboard</span></a></li>
+        
+        <li><a href="/messages/new" title="#"><i class="zmdi zmdi-smartphone-ring zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">New Alert</span></a></li>
+        
+        <li><a href="/messages" title="#"><i class="zmdi zmdi-comment-list zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Past Alerts</span></a></li>
+        
+        <li><a href="/appointments" title="#"><i class="zmdi zmdi-check zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Bookings</span></a></li>
+        
+        <li><a href="/subscribers" title="#"><i class="zmdi zmdi-face zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Subscribers</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Page Wrap -->
+  <div class="pageWrap">
+
+  <!-- Page content -->
+    <div class="pageContent extended">
+      <div class="container">
+        <div class="boxHeader pageBoxHeader clearfix">
+          <div class="pull-left">
+            <h1 class="pageTitle">
+              <a href="#" title="#">Dashboard</a>
+            </h1>
+            <ol class="breadcrumb">
+              <li><a href="dashboard.html">Last Minute List</a></li>
+              <li class="active">New</li>
+            </ol>
+          </div>
+        </div>
 
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-        <br>
-            <!-- Dashboard Panel - from Shared -->
-            <%= render "shared/dashboard_panel" %>
 
             <!-- PAGE CONTENT HERE -->
             <%- model_class = Message -%>
@@ -21,10 +105,11 @@
       </div>
     </div>          
   </div>
-<!-- /#wrapper -->
 
-<!-- Metis Menu Plugin JavaScript -->
-<%= javascript_include_tag "metisMenu.min" %>
+  <div class="visible-xs visible-sm extendedChecker"></div>
+  
+</body>
 
-<!-- Custom Theme JavaScript -->
-<%= javascript_include_tag "sb-admin-2" %>
+  <%= render "shared/dashboard_js" %>
+
+</html>

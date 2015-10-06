@@ -1,15 +1,34 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Messages</title>
+  <meta name="description" content="...">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Shared Resoures for the Dashboard -->
+  
+  <!-- styles are currently loading from application.css -->
+  
+</head>
+<body>
+  <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
 
+<div id="container">
+    <div class="row">
+        <div class="col-xs-3 .col-md-3">    
+        </div>
 
-<%= @appointment.message_id %>
-<%= @appointment.message.sms_message_body %>
-<p>test</p>
+        <div class="col-xs-6 .col-md-6">
 
-
-
-
-
-<div class="container">
-      <%= form_tag("/appointments/#{@appointment.id}/book", method: 'post') do %>
+        <h1>Book this appointment</h1>
+        <h3>For the following service: <%= @appointment.message.sms_message_body %></h3>
+        <h3>With the id: <%= @appointment.message_id %></h3>
+        <h3>At the following time: <%= @appointment.message.appointment_time %></h3>
+        
+        <%= form_tag("/appointments/#{@appointment.id}/book", method: 'post') do %>
         <%= label_tag :customer_name %>
         <%= text_field_tag :customer_name %>
         <%= submit_tag('Book')%>

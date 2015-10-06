@@ -1,3 +1,5 @@
+<%= render "shared/dashboard_css" %>
+
 <%= form_for @message, :html => { :class => "form-horizontal message" } do |f| %>
 
   <% if @message.errors.any? %>
@@ -46,3 +48,7 @@
   </div>
 
 <% end %>
+
+ <%= render "shared/dashboard_js" %>
+
+
