@@ -34,7 +34,7 @@ class MessagesController < ApplicationController
     @subscribers = Subscriber.all
     @message = Message.new(message_params)
     @appointment = Appointment.create(message_id:@message.id)
-    @message.claim_appointment_url = "http://localhost:3000/appointments/#{@appointment.id}"
+    @message.claim_appointment_url = "http://www.localhost:3000/appointments/#{@appointment.id}"
     respond_to do |format|
       if @message.save
         format.html { redirect_to @message, notice: 'Message was successfully created.' }
