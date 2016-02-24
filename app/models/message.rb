@@ -11,7 +11,7 @@ class Message < ActiveRecord::Base
   # This validation could connect to a checkbox for the user to read
   # the message before sending it
   # validates :message, acceptance: true
-
+  # hack_hands help
   after_create :reminder
 
   # to_number.each do |numbers|
