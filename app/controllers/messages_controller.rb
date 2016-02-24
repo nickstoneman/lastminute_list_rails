@@ -90,7 +90,7 @@ private
   end
 
   def message_params
-    params.require(:message).permit(:sms_message_body, :appointment_time, :claim_appointment_url)
+    params.require(:message).permit(:sms_message_body, :appointment_time, :appointment_discount, :claim_appointment_url)
   end
 end
 

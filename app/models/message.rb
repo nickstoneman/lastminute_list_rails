@@ -5,6 +5,12 @@ class Message < ActiveRecord::Base
 
   validates :sms_message_body, presence: true
   validates :appointment_time, presence: true
+  validates :appointment_discount, presence: true
+  # validates :claim_appointment_url, presence: true
+
+  # This validation could connect to a checkbox for the user to read
+  # the message before sending it
+  # validates :message, acceptance: true
 
   before_create :reminder
 
@@ -24,7 +30,8 @@ class Message < ActiveRecord::Base
       phone_number = subscriber.subscriber_phone_number
       @twilio_number = ENV['TWILIO_NUMBER']
       @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
-        reminder = "#{self.sms_message_body} and #{self.appointment_time} and #{self.claim_appointment_url}"
+        reminder = "#{self.sms_message_body.class} and #{self.appointment_time} and #{self.claim_appointment_url.class} and #{self.appointment_discount}"
+        # binding.pry
         message = @client.account.messages.create(
           :from => @twilio_number,
           :to => phone_number,
