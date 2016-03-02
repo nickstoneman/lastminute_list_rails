@@ -11,8 +11,8 @@ class Message < ActiveRecord::Base
   # This validation could connect to a checkbox for the user to read
   # the message before sending it
   # validates :message, acceptance: true
-  # hack_hands help
-  after_create :reminder
+  # hack_hands help - they suggested after_create :reminder , but I changed it back to the original and it works?
+  before_create :reminder
 
   # to_number.each do |numbers|
   # subscriber.subscriber_phone_number = Subscribers.all
@@ -30,7 +30,7 @@ class Message < ActiveRecord::Base
       phone_number = subscriber.subscriber_phone_number
       @twilio_number = ENV['TWILIO_NUMBER']
       @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
-        reminder = "#{self.sms_message_body.class} and #{self.appointment_time} and #{self.claim_appointment_url} and #{self.appointment_discount}"
+        reminder = "#{self.sms_message_body} and #{self.appointment_time} and #{self.claim_appointment_url} and #{self.appointment_discount}"
         # binding.pry
         message = @client.account.messages.create(
           :from => @twilio_number,
