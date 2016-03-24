@@ -23,10 +23,19 @@
 
         <div class="col-xs-6 .col-md-6">
         <h1>Book this appointment</h1>
-        <h3>With the id: <%= @appointment.message_id %></h3>
+        <h3>With the id: <%= @appointment.filled %></h3>
+        <h3>With the id: <%= @appointment.id %></h3>
+        <%= @message.sms_message_body %>
+        <%= @message.appointment_discount %>
+
+        
+        <h3>At the following time:   </h3>
+        <%= @message.appointment_time %>
+
+
 
         <% comment do %>
-        <h3>At the following time: <%= @appointment.message.appointment_time %>  </h3>
+        <h3>At the following time: <%= @message.appointment_time %>  </h3>
         <h3>For the following service: <%= @appointment.message.sms_message_body %></h3>
         <% end %>
 
@@ -36,5 +45,7 @@
         <%= submit_tag('Book')%>
       <% end %>
 </div>
+
+
 
 

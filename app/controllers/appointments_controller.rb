@@ -11,7 +11,7 @@ class AppointmentsController < ApplicationController
     # messages = Message.all.order(:id)
     @appointment = Appointment.find(params[:id])
     # @messages = Message.all
-    # @message = Message.find(params[:id])
+    @message = Message.find(params[:id])
     # @appointment = Appointment.new(message_params)
     # find(params[:id])
     # render :json => appointments

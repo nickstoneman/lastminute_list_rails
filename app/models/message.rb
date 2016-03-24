@@ -12,8 +12,8 @@ class Message < ActiveRecord::Base
   # the message before sending it
   # validates :message, acceptance: true
   # hack_hands help - they suggested after_create :reminder , but I changed it back to the original and it works?
-  before_create :reminder
-
+  # before_create :reminder
+  after_create :reminder
   # to_number.each do |numbers|
   # subscriber.subscriber_phone_number = Subscribers.all
   # to_number = @subscriber(:subscriber_phone_number)
@@ -30,7 +30,7 @@ class Message < ActiveRecord::Base
       phone_number = subscriber.subscriber_phone_number
       @twilio_number = ENV['TWILIO_NUMBER']
       @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
-        reminder = "#{self.sms_message_body} and #{self.appointment_time} and #{self.claim_appointment_url} and #{self.appointment_discount}"
+        reminder = "ADD_BIZ_NAME #{self.sms_message_body} @ #{self.appointment_time} claim or share: #{self.claim_appointment_url} and #{self.appointment_discount}"
         # binding.pry
         message = @client.account.messages.create(
           :from => @twilio_number,
