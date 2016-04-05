@@ -30,7 +30,7 @@ class AppointmentsController < ApplicationController
       flash[:notice] = "You have booked the appointment"
       #Send a flash message saying you are booked into the appointment
     else
-      flash[:notice] = "Sorry someone got there before you :-("
+      flash[:notice] = "Sorry someone got here before you :-("
       #Send back a flash message saying the appointment has already been booked
     end
 
