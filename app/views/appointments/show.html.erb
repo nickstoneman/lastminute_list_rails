@@ -23,17 +23,15 @@
 
         <div class="col-xs-6 .col-md-6">
         <h1>Book this appointment</h1>
-        <h3>Available: <%= @appointment.filled? %></h3>
+        <h3>Filled: <%= @appointment.filled? %></h3>
+        
         <h3>Message id: <%= @message.id %></h3>
         <h3>Appointment id: <%= @appointment.id %></h3>
-        <h3>Appointment id: <%= @appointment_id.sms_message_body %></h3>
         
-        <h2><%= @message.sms_message_body %></h2>
-        <%= :sms_message_body %>
-
+        <h2>Message Body: <%= @message.sms_message_body %></h2>
         
-        <h3>At the following time:   </h3>
-        <%= @message.appointment_time %>
+        <h3>At the following time: <%= @message.appointment_time %></h3>
+        
 
 
 
