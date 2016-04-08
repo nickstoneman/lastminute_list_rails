@@ -27,19 +27,21 @@
         <%= booked_or_not(@appointment.filled) %>
 
         
-        <h3>Message id: <%= @message.id %></h3>
+        
         <h3>Appointment id: <%= @appointment.id %></h3>
         
-        <h2>Message Body: <%= @message.sms_message_body %></h2>
-        
-        <h3>At the following time: <%= @message.appointment_time %></h3>
-        
 
+        
+        <%= SecureRandom.uuid %>
 
 
         <% comment do %>
         <h3>At the following time: <%= @message.appointment_time %>  </h3>
         <h3>For the following service: <%= @appointment.message.sms_message_body %></h3>
+        <h2>Message Body: <%= @message.sms_message_body %></h2>
+        
+        <h3>At the following time: <%= @message.appointment_time %></h3>
+        <h3>Message id: <%= @message.id %></h3>
         <% end %>
 
         <%= form_tag("/appointments/#{@appointment.id}/book", method: 'post') do %>
